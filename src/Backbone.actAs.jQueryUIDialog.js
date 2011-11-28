@@ -55,7 +55,12 @@ Backbone.actAs.jQueryUIDialog = {
 		opts.title = opts.title || options.title;
 		opts.style = opts.style || options.style;
 		opts['class'] = opts['class'] || options['class'];
-		this.actAs_jQueryUIDialog_dialog = $('<div class="Backbone_jQueryUIWindow '+opts['class']+'" style="'+opts.style+'" title="'+opts.title+'"></div>').append(content).appendTo($(this.getDialogOptions().mainContainerSelector));
+		this.actAs_jQueryUIDialog_dialog = $('<div class="Backbone_jQueryUIWindow '+opts['class']+'" style="'+opts.style+'" title="'+opts.title+'"></div>')
+			.append(content)
+			.appendTo(
+				$(this.getDialogOptions().mainContainerSelector)
+			);
+
 		var close = options.close,
 			_this = this;
 
